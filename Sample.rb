@@ -3,6 +3,10 @@ class Player
    # Process of the following method is created in this.
    # Puts the console into an input wait state, and outputs the value the player types from the console
     puts "Enter a  number between 0 and 2"
+    puts "0:Goo"
+    puts "1:Choki"
+    puts "2:par"
+    puts ""
     player_number = gets.to_i
     while player_number > 2 || player_number < 0 do
         puts "Wrong number please try again:"
@@ -36,7 +40,8 @@ class Janken
    elsif final_answer == 1
     puts "You are the looser"
    else 
-    puts "it's a draw"
+    puts "it's a draw, let's continue playing..."
+   
    end
  end
 end
