@@ -41,7 +41,7 @@ class Janken
     puts "You are the looser"
    else 
     puts "it's a draw, let's continue playing..."
-   
+    load 'Sample.rb'
    end
  end
 end
