@@ -1,5 +1,5 @@
 class Player
-  def handThe 
+  def hand
     #The player will be asked to input their number 
     puts "Enter a  number between 0 and 2"
     puts "0:Goo", "1:Choki", "2:par"
