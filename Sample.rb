@@ -33,7 +33,10 @@ class Janken
       puts "You are the looser"
     else 
       puts "it's a draw, let's continue playing..."
-      load 'Sample.rb'
+      player = Player.new
+      enemy = Enemy.new
+      janken = Janken.new
+      janken.pon(player.hand, enemy.hand)
     end
   end
 end
