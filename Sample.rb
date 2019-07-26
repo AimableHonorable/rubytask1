@@ -3,13 +3,15 @@ class Player
     #The player will be asked to input their number 
     puts "Enter a  number between 0 and 2"
     puts "0:Goo", "1:Choki", "2:par"
-    player_number = gets.to_i
-    while player_number > 2 || player_number < 0 do
-      puts "Wrong number please try again:"
-      player_number = gets.to_i
+    player_number = gets.chomp
+    
+    while player_number.to_i > 2 || player_number.to_i < 0 || player_number.gsub!(/\D/, "") || player_number == "" do
+      puts "Wrong Input please tenter only numbers 0, 1, or 2:"
+      player_number = gets.chomp
     end
-    puts "you choose #{player_number}"
+      puts "you choose #{player_number}"
     player_number
+    
   end
 end
 
@@ -25,7 +27,7 @@ end
 class Janken
   def pon(player_hand, enemy_hand)
     #calculating results and make decision if it's a win, loose or draw   
-    difference = player_hand - enemy_hand
+    difference = player_hand.to_i - enemy_hand.to_i
     final_answer =(difference + 3)%3
     if final_answer == 2
       puts "You are the winner"
